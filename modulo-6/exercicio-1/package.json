@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-node",
+  "version": "1.0.0",
+  "description": "Primeiros passos com Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

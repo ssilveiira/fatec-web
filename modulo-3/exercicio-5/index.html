@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Pokémon</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 3rem 1.5rem; color: #fff; }
+    h1 { font-size: 2rem; color: #e2b96f; margin-bottom: 2rem; }
+    .busca { display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+    .busca input { padding: 0.75rem 1.2rem; border: none; border-radius: 0.5rem; font-size: 1rem; min-width: 240px; }
+    .busca button { padding: 0.75rem 1.5rem; background: #e2b96f; color: #1a1a2e; border: none; border-radius: 0.5rem; font-weight: 700; cursor: pointer; font-size: 0.95rem; transition: transform 0.2s; }
+    .busca button:hover { transform: translateY(-2px); }
+    .navegacao { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    .navegacao button { padding: 0.5rem 1.2rem; background: #ffffff22; color: #fff; border: 1px solid #ffffff33; border-radius: 0.5rem; cursor: pointer; transition: background 0.2s; }
+    .navegacao button:hover { background: #ffffff44; }
+    #mensagem { color: #aaa; font-size: 0.95rem; min-height: 1.5rem; }
+    #card { display: none; background: #0f0f1a; border-radius: 1rem; padding: 2rem; text-align: center; max-width: 340px; width: 100%; border: 1px solid #ffffff11; }
+    #card img { width: 180px; height: 180px; }
+    #card h2 { font-size: 1.6rem; margin: 0.5rem 0; text-transform: capitalize; }
+    .tipos { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .tipo { padding: 3px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; text-transform: capitalize; }
+    .stats { width: 100%; text-align: left; }
+    .stat { margin-bottom: 0.5rem; }
+    .stat label { font-size: 0.8rem; color: #aaa; display: block; text-transform: capitalize; margin-bottom: 2px; }
+    .stat-bar { background: #ffffff22; border-radius: 999px; height: 8px; }
+    .stat-fill { height: 100%; border-radius: 999px; background: #e2b96f; }
+    .tipo-fire { background: #ff6b35; color: #fff; }
+    .tipo-water { background: #4a90d9; color: #fff; }
+    .tipo-grass { background: #4caf50; color: #fff; }
+    .tipo-electric { background: #f9c74f; color: #222; }
+    .tipo-psychic { background: #f72585; color: #fff; }
+    .tipo-ice { background: #90e0ef; color: #222; }
+    .tipo-dragon { background: #7b2d8b; color: #fff; }
+    .tipo-dark { background: #333; color: #fff; }
+    .tipo-normal { background: #aaa; color: #fff; }
+    .tipo-fighting { background: #c77d3e; color: #fff; }
+    .tipo-flying { background: #a0c4ff; color: #222; }
+    .tipo-poison { background: #9b59b6; color: #fff; }
+    .tipo-ground { background: #e0b974; color: #222; }
+    .tipo-rock { background: #b5a642; color: #fff; }
+    .tipo-bug { background: #91c639; color: #fff; }
+    .tipo-ghost { background: #4b3b8c; color: #fff; }
+    .tipo-steel { background: #9aa0b0; color: #fff; }
+    .tipo-fairy { background: #f4a8cf; color: #222; }
+  </style>
+</head>
+<body>
+
+  <h1>Buscador de Pokémon</h1>
+
+  <div class="busca">
+    <input type="text" id="input-pokemon" placeholder="Nome ou número do Pokémon">
+    <button id="btn-buscar">Buscar</button>
+  </div>
+
+  <div class="navegacao">
+    <button id="btn-anterior">← Anterior</button>
+    <button id="btn-proximo">Próximo →</button>
+  </div>
+
+  <p id="mensagem"></p>
+
+  <div id="card">
+    <img id="img-pokemon" src="" alt="">
+    <h2 id="nome-pokemon"></h2>
+    <div class="tipos" id="tipos-pokemon"></div>
+    <div class="stats" id="stats-pokemon"></div>
+  </div>
+
+  <script src="pokemon.js"></script>
+</body>
+</html>

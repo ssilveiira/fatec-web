@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos — DOM</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 2rem; }
+    h1 { margin-bottom: 1.5rem; color: #1a1a2e; }
+    .controles { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    button { padding: 0.6rem 1.4rem; border: none; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; }
+    #btn-filtrar { background-color: #1a1a2e; color: #e2b96f; }
+    #btn-limpar { background-color: #c0392b; color: #fff; }
+    button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .input-novo { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .input-novo input { padding: 0.6rem 1rem; border: 1px solid #ddd; border-radius: 0.5rem; font-size: 0.9rem; flex: 1; min-width: 140px; }
+    #btn-adicionar { background-color: #27ae60; color: #fff; }
+    #container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .card-produto { background: #fff; border-radius: 0.75rem; padding: 1.2rem; border: 1px solid #e0e0e0; transition: transform 0.2s; }
+    .card-produto:hover { transform: translateY(-3px); }
+    .card-produto h3 { color: #1a1a2e; margin-bottom: 0.4rem; font-size: 1rem; }
+    .card-produto .preco { color: #27ae60; font-weight: 700; margin-bottom: 0.3rem; }
+    .card-produto .categoria { font-size: 0.75rem; background: #e2b96f22; color: #8a6d2f; padding: 2px 8px; border-radius: 999px; display: inline-block; }
+    .oculto { display: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Lista de Produtos</h1>
+
+  <div class="controles">
+    <button id="btn-filtrar">Mostrar só eletrônicos</button>
+    <button id="btn-limpar">Limpar tudo</button>
+  </div>
+
+  <div class="input-novo">
+    <input type="text" id="input-nome" placeholder="Nome do produto">
+    <input type="number" id="input-preco" placeholder="Preço (R$)" min="0">
+    <input type="text" id="input-categoria" placeholder="Categoria">
+    <button id="btn-adicionar">Adicionar</button>
+  </div>
+
+  <div id="container"></div>
+
+  <script src="produtos.js"></script>
+</body>
+</html>

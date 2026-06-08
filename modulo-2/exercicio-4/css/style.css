@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #2d2d2d;
+  background-color: #f9f7f4;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #e2b96f;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e2b96f;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid #e2b96f;
+}
+
+p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+figure img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1a1a2e;
+  color: #e2b96f;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee8df;
+}
+
+tbody tr:hover {
+  background-color: #e2b96f33;
+}
+
+ol {
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+ol a {
+  color: #1a1a2e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+ol a:hover {
+  color: #e2b96f;
+}
+
+footer {
+  background-color: #1a1a2e;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #e2b96f;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
