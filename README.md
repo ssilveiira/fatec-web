@@ -76,4 +76,4 @@ npm run dev
 
 ---
 
-* DESENVOLVIMENTO WEB- 5° CICLO ADS/ FATEC Itapetininga — 2026 *
+* DESENVOLVIMENTO WEB- 5° CICLO ADS/ FATEC Itapetininga — 2026 
